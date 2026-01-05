@@ -1,0 +1,413 @@
+.page {
+  min-height: 100%;
+  padding: 0 0 28px;
+}
+
+
+.heroWrapper {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 55vh, 680px);
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.heroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.heroFallback {
+  width: 100%;
+  height: 100%;
+}
+
+/* Figma gradient */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 13, 35, 0) 0%,
+    rgba(7, 13, 35, 0.7) 45%,
+    rgba(7, 13, 35, 0.9) 70%,
+    rgba(6, 18, 35, 1) 100%
+  );
+  pointer-events: none;
+}
+
+/* Back button on hero (MOBILE ONLY) */
+.backBtnOnHero {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 16px;
+  padding: 10px;
+  background: rgba(34, 44, 79, 0.85);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.backIcon {
+  width: 18px;
+  height: 18px;
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.backBtnDesktop {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 16px;
+  padding: 10px;
+  background: rgba(34, 44, 79, 0.85);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.95);
+  margin-bottom: 32px;
+}
+
+.backIconDesktop {
+  width: 18px;
+  height: 18px;
+}
+
+
+.container {
+  width: min(920px, 92vw);
+  margin: -180px auto 0;
+  position: relative;
+  z-index: 3;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    margin-top: -220px;
+  }
+}
+
+.loading {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  padding: 40px 0;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+/* LEFT */
+.left {
+  display: grid;
+  gap: 16px;
+}
+
+.poster {
+  width: 100%;
+  border-radius: 18px;
+  display: block;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* RATING BLOCK (DESKTOP) */
+.ratingBlock {
+  display: grid;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.scoreRow {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.scoreLeft {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.scoreRing {
+  position: relative;
+  width: var(--ring-size, 120px);
+  height: var(--ring-size, 120px);
+}
+
+.scoreValue {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+}
+
+.scoreText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.scoreCount {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+}
+
+.scoreLabel {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.scoreSourcesDesktop {
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  display: grid;
+  gap: 4px;
+}
+
+
+.right {
+  display: grid;
+  gap: 10px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+}
+
+.genres {
+  margin-top: 6px;
+  font-size: 12px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.desc {
+  margin: 12px 0 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 72ch;
+}
+
+
+.chips {
+  margin-top: 14px;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chip {
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 400;
+  background: rgba(34, 44, 79, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+
+.inlineFavBtn {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  flex: 0 0 auto;
+}
+
+.inlineFavBtn:hover {
+  color: rgba(114, 76, 249, 1);
+}
+
+.favActive {
+  color: rgba(114, 76, 249, 1);
+}
+
+.favIcon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+
+.detailsTitle {
+  margin: 24px 0 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+}
+
+.detailsTable {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.rowLine {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 18px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.k {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 1);
+}
+
+.v {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+.mobileStack {
+  display: none;
+}
+
+.mobileFavBar {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .backBtnDesktop {
+    display: none;
+  }
+
+  .backBtnOnHero {
+    display: grid;
+  }
+
+  .hero {
+    height: 260px;
+  }
+
+  .container {
+    margin-top: -90px;
+  }
+
+
+  .mobileStack {
+    display: grid;
+    gap: 16px;
+    padding-bottom: 90px; 
+  }
+
+
+  .mobileScoresRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .mobileScoreLeft {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-width: 0;
+  }
+
+  .mobileScoreRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.5);
+    max-width: 42%;
+  }
+
+
+  .scoreValue {
+    font-size: 18px;
+  }
+
+
+  .mobileFavBar {
+    display: block;
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    z-index: 999;
+  }
+
+  .mobileFavBtn {
+    width: 100%;
+    height: 41px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(34, 44, 79, 1);
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  .mobileFavBtnActive {
+    background: rgba(114, 76, 249, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+
+
+  .grid {
+    display: none;
+  }
+}
+
+/* ✅ On desktop: hide hero back */
+@media (min-width: 861px) {
+  .backBtnOnHero {
+    display: none;
+  }
+}

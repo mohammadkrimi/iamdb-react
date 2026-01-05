@@ -1,0 +1,92 @@
+.wrapper {
+  width: min(820px, 92vw);
+  margin: 10px auto 0;
+}
+
+.arrow {
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.more {
+  background: var(--surface-primary);
+  border: none;
+  color: var(--text-primary);
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  line-height: 1;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.more:hover{
+  background: var(--surface-hover);
+}
+
+
+.chip {
+  background: var(--surface-primary);
+  border: none;
+  color: var(--text-primary);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+}
+
+.chip:hover {
+  background: var(--surface-hover);
+}
+
+
+.more:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.skelChip {
+  width: 70px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  position: relative;
+  overflow: hidden;
+}
+.skelChip::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparnt, rgba(255,255,255,0.10), transparent);
+  transform: translateX(-100%);
+  animation: move 1.1s infinite;
+}
+@keyframes move {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.wrap {
+  width: min(820px, 92vw);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 6px;
+}
