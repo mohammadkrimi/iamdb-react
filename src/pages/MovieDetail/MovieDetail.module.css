@@ -5,14 +5,16 @@
 
 
 .heroWrapper {
-  /* width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw); */
   width: 100%;
-  margin-left: 0;
-  margin-right: 0;
   overflow: hidden;
+}
 
+@media (min-width: 861px) {
+  .heroWrapper {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
 }
 
 /* HERO */
@@ -410,7 +412,7 @@
   }
 }
 
-/* ✅ On desktop: hide hero back */
+/* On desktop: hide hero back */
 @media (min-width: 861px) {
   .backBtnOnHero {
     display: none;
