@@ -4,7 +4,7 @@
   --surface-hover: rgba(34, 44, 79, 1);
   --text-primary: #FFFFFF;
   --text-muted: rgba(255, 255, 255, 1);
-  overflow-x: hidden;
+  
 }
 
 * {
@@ -22,6 +22,7 @@ html, body {
   min-height: 100vh;   /* fallback */
   min-height: 100dvh;  /* modern */
   background: var(--bg-primary);
+  overflow-x: hidden;
 }
 
 body {
