@@ -4,6 +4,7 @@
   --surface-hover: rgba(34, 44, 79, 1);
   --text-primary: #FFFFFF;
   --text-muted: rgba(255, 255, 255, 1);
+  overflow-x: hidden;
 }
 
 * {
@@ -12,6 +13,8 @@
 
 html, body {
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
   background: var(--bg-primary); 
 }
 
